@@ -1,7 +1,7 @@
-name: CI & CD
+name: Pull Request
 on:
   push:
-    branches:
+    branches-ignore:
       - master
 jobs:
   Build-and-Deploy:
@@ -25,4 +25,3 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           working-directory: ./
-          vercel-args: --prod
