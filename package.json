@@ -2,13 +2,27 @@
   "repository": "https://github.com/idea2app/Vercel-Node-serverless.git",
   "license": "MIT",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
   "devDependencies": {
     "@types/node": "^18.18.13",
     "@vercel/node": "^3.0.11",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
+    "prettier": "^3.1.0",
     "typescript": "~5.3.2"
   },
   "prettier": {
     "singleQuote": true,
     "arrowParens": "avoid"
+  },
+  "lint-staged": {
+    "*.{md,json,yml,ts}": "prettier --write"
+  },
+  "scripts": {
+    "prepare": "husky install  ||  true",
+    "test": "lint-staged"
   }
 }
