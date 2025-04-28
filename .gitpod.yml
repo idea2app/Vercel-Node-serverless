@@ -4,6 +4,20 @@
 
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 
+vscode:
+  extensions:
+    - yzhang.markdown-all-in-one
+    - redhat.vscode-yaml
+    - akamud.vscode-caniuse
+    - visualstudioexptteam.intellicode-api-usage-examples
+    - pflannery.vscode-versionlens
+    - christian-kohler.npm-intellisense
+    - esbenp.prettier-vscode
+    - rangav.vscode-thunder-client
+    - cweijan.vscode-database-client2
+    - eamodio.gitlens
+    - github.vscode-pull-request-github
+    - github.vscode-github-actions
 tasks:
   - before: |
       pnpm i vercel -g
