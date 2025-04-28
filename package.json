@@ -4,15 +4,15 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "devDependencies": {
-    "@types/node": "^18.18.13",
-    "@vercel/node": "^3.0.11",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.1.0",
-    "prettier": "^3.1.0",
-    "typescript": "~5.3.2"
+    "@types/node": "^22.15.3",
+    "@vercel/node": "^5.1.14",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "prettier": "^3.5.3",
+    "typescript": "~5.8.3"
   },
   "prettier": {
     "singleQuote": true,
@@ -22,7 +22,12 @@
     "*.{md,json,yml,ts}": "prettier --write"
   },
   "scripts": {
-    "prepare": "husky install  ||  true",
+    "prepare": "husky || true",
     "test": "lint-staged"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
